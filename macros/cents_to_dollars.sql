@@ -1,5 +1,3 @@
-{% macro cents_to_dollars(col_name,decimals=2) %}
-
-    ROUND({{col_name}}/100,{{decimals}})
-    
+{% macro cents_to_dollars(amount,decimal=2) %}
+    ROUND({{amount}}/100,{{decimal}})
 {% endmacro %}

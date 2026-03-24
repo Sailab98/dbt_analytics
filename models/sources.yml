@@ -20,7 +20,7 @@ sources:
         config:
           freshness: 
             warn_after: 
-              count: 2
+              count: 1
               period: day
 
             error_after: 
@@ -32,6 +32,8 @@ sources:
     database: raw 
     tables: 
       - name: payment
+        # tests:
+        #   - no_non_zero_amount_failed
 
   - name: dbt_learn_jinja
     database: raw 
